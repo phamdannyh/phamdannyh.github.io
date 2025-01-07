@@ -14,13 +14,32 @@
     function gtag() {dataLayer.push(arguments);}
     gtag('js', new Date());
 
+
+    dataLayer.push({
+      'user_data': {
+        'email': 'data_layer_email@gmail.com',
+        'phone_info': {
+            'phone': 12345678901,
+        },
+        'user_name': {
+            'first_name': 'Brandon',
+        },
+        'address': {
+            'street': null,
+            'country': 'US',
+            'region': 'CA',
+            'post': 88888,
+        }
+      },
+    });
+
     gtag('config', 'G-2G7BCTCR74');
     gtag('event', 'form_submit', {});
   </script>
 </head>
 
 <body>
-  <p>Test Case 7</p>
+  <p>Test Case 6</p>
   <p>Script being loaded from: https://gtm-ctfe-preprod.corp.google.com/gtag/js?id=G-2G7BCTCR74</p>
   <br/>
 
