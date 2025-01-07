@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Data Layer Search Test</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://gtm-ctfe-preprod.corp.google.com/gtag/js?id=G-2G7BCTCR74"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    dataLayer.push({
+      'user_data': {
+        'email': 'data_layer_email@gmail.com',
+        'phone': '12345678901',
+        'address': {
+          'first_name': 'Brandon',
+          'last_name': 'Walsh',
+          'street': '123 Main St',
+          'city': 'MyCity',
+          'state': 'CA',
+          'postal_code': 88888,
+          'country': 'US',
+        },
+      },
+    });
+
+    gtag('config', 'G-2G7BCTCR74');
+    gtag('event', 'form_submit', {});
+  </script>
+</head>
+
+<body>
+  Hello world
+  <script src="script.js"></script>
+  <div id='email_for_auto_only'>phamdanny@gmail.com</div>
+  <div>
+    <label for='fullName'>full name: </label>
+    <input id='fullName' type='text' name='fullName' placeholder='full name' value='Danny Pham'>
+  </div>
+  <div>
+    <label for='phone-input'>phone:</label>
+    <input id='phone-input' type='text' value='1 (714) 555-5555' autocomplete='tel'>
+    <input id='zipcode-input' type='text' value='88888'>
+    <input id='country-input' type='text' value='US'>
+  </div>
+  <button type="submit">Submit</button>
+
+</body>
+
+</html>
