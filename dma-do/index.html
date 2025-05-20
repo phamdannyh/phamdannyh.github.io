@@ -14,15 +14,17 @@
   gtag('js', new Date());
 
   gtag('consent', 'default', {'ad_user_data': 'granted'});
-            gtag('config', 'AW-10891540862');
-            gtag('event', 'conversion', {'send_to': 'AW-10891540862/convlabel'});
-
+  gtag('config', 'T817QK3477');
+  gtag('event', 'conversion', {'send_to': 'G-T817QK3477/convlabel'});
 </script>
-
 </head>
 
 <body>
   Hello world
+  <button id="consent-btn"
+    onclick="gtag('consent', 'update', {'ad_user_data': 'granted'});">
+    I consent user data
+  </button>
 </body>
 
 </html>
